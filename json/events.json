@@ -12,5 +12,12 @@
     "Descp" : "Lorem ipsum dolor a ism",
     "Fee"   : "$6.99",
     "src"   : "/events/2"
+  },
+  {
+    "Event" : "Lifesize hungry hungry hippos",
+    "Date"  : "March 22nd",
+    "Descp" : "Have Fun",
+    "Fee"   : "Free",
+    "src"   : "/events/3"
   }
 ]

@@ -43,7 +43,7 @@ router.post('/contact', (req, res) => {
   let formData = [];
     formData.name = req.body.name;
     formData.email = req.body.email;
-    formData.decp = req.body.details;
+    formData.descp = req.body.details;
 
     const contactdata = new contact(formData);
 
@@ -71,6 +71,6 @@ router.post('/contact', (req, res) => {
   })
 
   res.render('pages/contact')
-})
+});
 
 module.exports = router
