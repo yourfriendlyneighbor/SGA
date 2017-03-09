@@ -1,0 +1,51 @@
+[
+  {
+    "six" : [
+      {
+        "name" : "Jonah Perelman",
+        "rank" : "Student REP."
+      },
+      {
+        "name" : "Andrew Levy",
+        "rank" : "Member"
+      },
+      {
+        "name" : "Rachel Halpern",
+        "rank" : "Student REP."
+      },
+      {
+        "name" : "Alex Pazano",
+        "rank" : "Vice President"
+      },
+      {
+        "name" : "Mikey Cambell",
+        "rank" : "President"
+      },
+      {
+        "name" : "Vannesa something",
+        "rank" : "Unknown"
+      },
+      {
+        "name" : "Noah something",
+        "rank" : "Unknown"
+      },
+      {
+        "name" : "Elizabeth Sherzer",
+        "rank" : "Unknown"
+      },
+      {
+        "name" : "Rachel Something",
+        "rank" : "Unknown"
+      }
+    ],
+    "seven" : [
+      {
+        "name" : "Princess",
+        "rank" : "Unknown"
+      }
+    ],
+    "eight" : [
+
+    ]
+  }
+]

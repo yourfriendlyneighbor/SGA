@@ -1,6 +1,7 @@
 const
 express = require('express'),
 events = require('../json/events.json'),
+members = require('../json/members.json'),
 mongoose = require('mongoose'),
 contact = require('../models/contact'),
 nodemailer = require('nodemailer');
@@ -67,10 +68,14 @@ router.post('/contact', (req, res) => {
         console.log('Message %s sent: %s', info.messageId, info.response);
     });
     }
-
   })
-
   res.render('pages/contact')
 });
+router.get('/members', (req, res) => {
+  res.render('pages/members', {
+    members: members
+  })
+})
+
 
 module.exports = router

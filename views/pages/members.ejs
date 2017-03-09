@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head.ejs %>
+    <title>SGA</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <% include ../partials/header.ejs %>
+      <div class="container">
+        <div class="page-header">
+            <h1>
+              Welcome to the Randolph SGA
+              <small>Lorem ipsum dolor</small>
+            </h1>
+        </div>
+        <% include ../partials/sidebar.ejs %>
+        <div class="col-md-8">
+
+            <h3>Member List</h3>
+
+            <table class="table table-striped">
+
+                <tr>
+                  <th>Name</th>
+                  <th>Rank</th>
+                  <th>Grade</th>
+                </tr>
+                <% for(var i = 0; i < members.length; i++) { %>
+                  <% for(var a = 0; a < members[i].six.length; a++){ %>
+                    <tr>
+                      <td><%= members[i].six[a].name %></td>
+                      <td><%= members[i].six[a].rank %></td>
+                      <td>6th</td>
+                    </tr>
+                  <% } %>
+                  <% for(var a = 0; a < members[i].seven.length; a++){ %>
+                    <tr>
+                      <td><%= members[i].seven[a].name %></td>
+                      <td><%= members[i].seven[a].rank %></td>
+                      <td>7th</td>
+                    </tr>
+                  <% } %>
+                  <% for(var a = 0; a < members[i].eight.length; a++){ %>
+                    <tr>
+                      <td><%= members[i].eight[a].name %></td>
+                      <td><%= members[i].eight[a].rank %></td>
+                      <td>8th</td>
+                    </tr>
+                  <% } %>
+                <% } %>
+            </table>
+
+
+        </div>
+
+        <div id="push"></div>
+      </div>
+
+      <% include ../partials/footer.ejs %>
+    </div>
+
+
+
+
+    <% include ../partials/scripts.ejs %>
+  </body>
+</html>
