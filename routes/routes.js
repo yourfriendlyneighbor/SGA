@@ -1,6 +1,6 @@
 const
 express = require('express'),
-events = require('../events.json'),
+events = require('../json/events.json'),
 mongoose = require('mongoose'),
 contact = require('../models/contact'),
 nodemailer = require('nodemailer');
@@ -32,7 +32,6 @@ router.get('/contact', (req, res) => {
 });
 router.get('/faq', (req, res) => {
   res.render('pages/faq', {
-
   })
 });
 router.get('/feedback', (req, res) => {
@@ -46,7 +45,7 @@ router.post('/contact', (req, res) => {
     formData.email = req.body.email;
     formData.decp = req.body.details;
 
-  var contactdata = new contact(formData);
+    const contactdata = new contact(formData);
 
   contactdata.save(function(err){
     if(err){
