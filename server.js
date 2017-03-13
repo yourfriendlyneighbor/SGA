@@ -4,6 +4,7 @@ path = require('path'),
 bodyParser = require('body-parser'),
 mongoose = require('mongoose'),
 routes = require('./routes/routes'),
+compress = require('compression'),
 port = process.env.PORT || 3000;
 
 mongoose.connect('mongodb://2140135:9027@ds042128.mlab.com:42128/sga')
@@ -18,6 +19,7 @@ app.use(bodyParser.json());
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+app.use(compress()); 
 app.use(express.static(path.join(__dirname + '/public')))
 
 app.use('/', routes)
