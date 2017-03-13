@@ -22,11 +22,11 @@
         "rank" : "President"
       },
       {
-        "name" : "Vannesa something",
+        "name" : "Vannesa",
         "rank" : "Unknown"
       },
       {
-        "name" : "Noah something",
+        "name" : "Noah Weiss",
         "rank" : "Unknown"
       },
       {
@@ -34,8 +34,12 @@
         "rank" : "Unknown"
       },
       {
-        "name" : "Rachel Something",
+        "name" : "Rachel",
         "rank" : "Unknown"
+      },
+      {
+        "name" : "Lolly",
+        "rank" : "member"
       }
     ],
     "seven" : [
@@ -46,6 +50,16 @@
     ],
     "eight" : [
 
+    ],
+    "Unknown" : [
+      {
+        "name" : "Rishi P",
+        "rank" : "Unknown"
+      },
+      {
+        "name" : "Herbet C",
+        "rank" : "Unknown"
+      }
     ]
   }
 ]

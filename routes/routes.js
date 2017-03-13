@@ -17,9 +17,19 @@ let transporter = nodemailer.createTransport({
 });
 
 router.get('/', (req, res) => {
-  res.render('pages/index', {
-    events: events
-  });
+  if(dimensions){
+    if (dimensions >= 767) {
+      return res.render('pages/index', {
+        events: events,
+        mobile: true
+      });
+    }else{
+      return res.render('pages/index', {
+        events: events,
+        mobile: false
+      });
+    }
+  }
 });
 router.get('/events/:id', (req, res) => {
   res.render('pages/event', {
@@ -75,6 +85,36 @@ router.get('/members', (req, res) => {
   res.render('pages/members', {
     members: members
   })
+});
+
+const dimensions = []
+
+router.post('/pageSize', (req, res) => {
+  dimensions.width = req.body.width;
+  dimensions.height = req.body.height;
+  console.log(dimensions);
+})
+router.get('/login', (req, res) => {
+  res.render('pages/login', {
+    err: false
+  })
+});
+
+router.post('/login', (req, res) => {
+  function validateEmail(email) {
+    const re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
+  let email;
+  for (var i = 0; i < req.body.length; i++) {
+    email = req.body[i].email
+  }
+  if (validateEmail(email)) {
+    return res.send('Succcess')
+  } else {
+    return res.send('Rip')
+  }
+  return false;
 })
 
 

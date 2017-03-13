@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../partials/head.ejs %>
+    <title>Login</title>
+    <style media="screen">
+    @import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+body {
+font-family: 'Ubuntu Condensed', sans-serif;
+background: #424949;
+}
+h1 {
+font-size: 50px;
+color: #73C6B6;
+}
+.loginbox {
+margin:auto;
+text-align: center;
+color: #777;
+
+}
+input {
+margin: 5px 0px 15px 0px;
+width: 250px;
+height: 40px;
+text-align: center;
+background-color: transparent;
+border:1px solid #fff;
+border-right: none;
+border-left: none;
+color: #fff;
+outline: none;
+font-size: 18px;
+transition: all 0.5s ease-in-out;
+font-family: 'Ubuntu Condensed', sans-serif;
+}
+input:focus {
+background-color: rgba(115, 198, 182, 0.2);
+}
+button {
+width: 250px;
+height: 40px;
+color: #fff;
+background: #73C6B6;
+border:none;
+outline: none;
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-size: 18px;
+transition: all .5s ease-in-out;
+}
+
+button:focus{
+background: rgba(115, 198, 182, 0.6);
+color: #fff;
+}
+
+::-webkit-input-placeholder {
+ color: rgba(255,255,255, .8);
+ transition: all 0.2s linear;
+}
+input:focus::-webkit-input-placeholder {
+color: transparent;
+}
+
+    </style>
+  </head>
+  <body>
+
+    <div class="loginbox">
+        <h1>Login</h1>
+        <form method="post" action="/login">
+          <div class="form">
+            <% if(err){ %>
+              <p class="danger">HAHA</p>
+            <% } %>
+              <input type="email" placeholder="Email" name="email"></input><br />
+              <input type="password" placeholder="Password" name="pass"></input>
+          </div>
+          <button type="submit">Login</button>
+        </form>
+    </div>
+
+
+
+    <% include ../partials/scripts.ejs %>
+
+
+
+  </body>
+
+
+
+
+  </body>
+</html>

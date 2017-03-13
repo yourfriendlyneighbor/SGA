@@ -21,7 +21,8 @@ app.set('view engine', 'ejs');
 app.use(express.static(path.join(__dirname + '/public')))
 
 app.use('/', routes)
-
+app.use('/login', routes)
+app.use('/pageSizer', routes)
 
 app.listen(port, () => {
   console.log('Server running...');

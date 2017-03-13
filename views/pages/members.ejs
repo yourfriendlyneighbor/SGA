@@ -48,6 +48,13 @@
                       <td>8th</td>
                     </tr>
                   <% } %>
+                  <% for(var a = 0; a < members[i].Unknown.length; a++){ %>
+                    <tr>
+                      <td><%= members[i].Unknown[a].name %></td>
+                      <td><%= members[i].Unknown[a].rank %></td>
+                      <td>Unknown</td>
+                    </tr>
+                  <% } %>
                 <% } %>
             </table>
 

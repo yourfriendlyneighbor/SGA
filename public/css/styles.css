@@ -72,3 +72,8 @@ html,
      ul.links > li:hover::before {
        border-color: red; /* For the arrow (which is a border) */
      }
+     * {
+       box-sizing: border-box;
+       margin: 0;
+       padding: 0;
+     }
